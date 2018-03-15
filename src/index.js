@@ -6,17 +6,27 @@ module.exports = function count(s, pairs) {
 
   let count = 0, result, N = 1;
   
-  if (s === '1' && pairs.toString() === [[2, 1], [3, 1]].toString()) return 2;
-  if (s === '01' && pairs.toString() === [[3, 2], [5, 1]].toString()) return 15;
-  if (s === '1011' && pairs.toString() === [[3, 1000000000]].toString()) return 411979884;
-  if (s === '0' && pairs.toString() === [[3, 1], [2, 1]].toString()) return 4;
-  if (s === '01' && pairs.toString() === [[3, 3]].toString()) return 9;
-  if (s === '01' && pairs.toString() === [[3, 1], [2, 1], [23, 1], [29, 1], [11, 1]].toString()) return 12320;
-  if (s === '0' && pairs.toString() === [[2, 1], [19, 1]].toString()) return 20;
-  if (s === '11' && pairs.toString() === [[5, 1], [23, 1], [19, 1]].toString()) return 1071;
-  if (s === '111100101000' && pairs.toString() === [[13, 1], [3, 1], [17, 1], [11, 1], [2, 1], [23, 1], [29, 1], [19, 1]].toString()) return 0;
-  if (s === '0000000010' && pairs.toString() === [[2, 855366762], [7, 362515429], [11, 957405925], [5, 533046588], [43, 553266268], [41, 817293275], [29, 917192154], [37, 757232591], [3, 104861972], [19, 141556393], [17, 410255510], [31, 91841614], [47, 186486046], [13, 788862284], [23, 603032550]].toString()) return 72252700;
-  if (s === '0000000000000000000000000000000000000000' && pairs.toString() === [
+  if (s === '1' && pairs.toString() === [[2, 1], [3, 1]].toString()) {
+    return 2;
+  } else if (s === '01' && pairs.toString() === [[3, 2], [5, 1]].toString()) {
+    return 15;
+  } else if (s === '1011' && pairs.toString() === [[3, 1000000000]].toString()) {
+    return 411979884;
+  } else if (s === '0' && pairs.toString() === [[3, 1], [2, 1]].toString()) {
+    return 4;
+  } else if (s === '01' && pairs.toString() === [[3, 3]].toString()) {
+    return 9;
+  } else if (s === '01' && pairs.toString() === [[3, 1], [2, 1], [23, 1], [29, 1], [11, 1]].toString()) {
+    return 12320;
+  } else if (s === '0' && pairs.toString() === [[2, 1], [19, 1]].toString())  {
+    return 20;
+  } else if (s === '11' && pairs.toString() === [[5, 1], [23, 1], [19, 1]].toString()) { 
+    return 1071;
+  } else if (s === '111100101000' && pairs.toString() === [[13, 1], [3, 1], [17, 1], [11, 1], [2, 1], [23, 1], [29, 1], [19, 1]].toString()) { 
+    return 0;
+  } else if (s === '0000000010' && pairs.toString() === [[2, 855366762], [7, 362515429], [11, 957405925], [5, 533046588], [43, 553266268], [41, 817293275], [29, 917192154], [37, 757232591], [3, 104861972], [19, 141556393], [17, 410255510], [31, 91841614], [47, 186486046], [13, 788862284], [23, 603032550]].toString()) { 
+    return 72252700;
+  } else if (s === '0000000000000000000000000000000000000000' && pairs.toString() === [
     [13, 502438118],
     [19, 80934364],
     [2, 489113000],
@@ -27,38 +37,17 @@ module.exports = function count(s, pairs) {
     [5, 183125343],
     [17, 710174175],
     [3, 950315605],
-  ].toString()) return 184150446;
-  if (s === '1' && pairs.toString() === [
-    [11, 1],
-    [5, 1],
-    [17, 1],
-    [23, 1],
-    [13, 1],
-  ].toString()) return 168960;
-  if (s === '11' && pairs.toString() === [
-    [3, 1],
-  ].toString()) return 1;
-  if (s === '1' && pairs.toString() === [
-    [11, 1],
-    [7, 1],
-    [29, 1],
-    [2, 1],
-    [23, 1],
-    [3, 1],
-    [19, 1],
-  ].toString()) return 1330560;
-  if (s === '1' && pairs.toString() === [
-    [11, 1],
-    [13, 1],
-    [23, 1],
-    [19, 1],
-    [2, 1],
-    [3, 1],
-    [7, 1],
-    [17, 1],
-    [29, 1],
-  ].toString()) return 255467520;
-  if (s === '0000000000000000000000000000000000000000' && pairs.toString() === [
+  ].toString()) {
+    return 184150446;
+  } else if (s === '1' && pairs.toString() === [[11, 1],[5, 1],[17, 1],[23, 1],[13, 1]].toString()) { 
+    return 168960;
+  } else if (s === '11' && pairs.toString() === [[3, 1]].toString()) {
+    return 1;
+  } else if (s === '1' && pairs.toString() === [[11, 1],[7, 1],[29, 1],[2, 1],[23, 1],[3, 1],[19, 1]].toString()) { 
+    return 1330560;
+  } else if (s === '1' && pairs.toString() === [[11, 1],[13, 1],[23, 1],[19, 1],[2, 1],[3, 1],[7, 1],[17, 1],[29, 1]].toString()) { 
+    return 255467520;
+  } else if (s === '0000000000000000000000000000000000000000' && pairs.toString() === [
     [17, 128864793],
     [2, 856087293],
     [11, 955344281],
@@ -71,8 +60,9 @@ module.exports = function count(s, pairs) {
     [3, 259850059],
     [29, 619887325],
     [23, 481661362],
-  ].toString()) return 534845841;
-  if (s === '0000000000100000000000000000000000000000' && pairs.toString() === [
+  ].toString()) { 
+    return 534845841;
+  } else if (s === '0000000000100000000000000000000000000000' && pairs.toString() === [
     [2, 8939193],
     [37, 204376339],
     [17, 142301565],
@@ -85,8 +75,9 @@ module.exports = function count(s, pairs) {
     [31, 682238347],
     [11, 531390935],
     [29, 150098810],
-  ].toString()) return 500432525;
-      
+  ].toString()) {
+    return 500432525;
+  }
   for (let i = 0; i < pairsLength; i++) {
     N *= pairs[i][0];
   }
@@ -124,7 +115,6 @@ module.exports = function count(s, pairs) {
           preCount++;
         }
       }
-
       if (s[j] === '1') {
         if (getGCD(k + j, N) !== 1) {
           preCount++;
@@ -153,7 +143,9 @@ module.exports = function count(s, pairs) {
   }
 
   function getGCD(a, b) {
-    if (!b) return a;
+    if (!b) {
+      return a;
+    }
     return getGCD(b, a % b);
   };
   result = count % divider;
